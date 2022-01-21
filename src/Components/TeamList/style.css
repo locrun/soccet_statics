@@ -1,0 +1,17 @@
+.team-card {
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.team-icon img {
+  width: 70px;
+  object-fit: contain;
+}
+.team-name {
+  margin: 0;
+  font-family: Arial;
+  font-weight: 600;
+}

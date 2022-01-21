@@ -1,0 +1,48 @@
+.card-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card {
+  margin: 0 15px 25px;
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.card-images img {
+  height: 120px;
+  line-height: 0;
+  object-fit: contain;
+}
+.card-title {
+  margin-top: 20px;
+}
+
+.country-name {
+  color: #9d1616cc;
+  margin: 0;
+  font-family: Arial;
+  line-height: 1.3;
+  font-weight: 800;
+}
+.champ-name {
+  margin: 0;
+  width: 190px;
+  margin: 0 auto;
+  font-family: Arial;
+  font-weight: 800;
+  line-height: 1.3;
+  font-size: 18px;
+}
+.card-btn-wrapper {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}

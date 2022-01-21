@@ -1,0 +1,27 @@
+.header {
+  background: rgb(102, 96, 139);
+  background: linear-gradient(
+    90deg,
+    rgba(102, 96, 139, 0.8323704481792717) 0%,
+    rgba(101, 148, 171, 1) 75%
+  );
+  color: #fff;
+  padding: 15px 0;
+}
+
+.container {
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+}
+.header-title {
+  font-family: "Permanent Marker", cursive;
+  color: #fff;
+  font-size: 48px;
+  margin: 0;
+  margin-left: 100px;
+}
