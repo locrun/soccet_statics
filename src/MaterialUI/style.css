@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 150px;
+
+  margin-bottom: 10px;
+}
+@media (min-width: 420px) {
+  .wrapper {
+    height: 50px;
+    margin-bottom: 30px;
+  }
+}

@@ -21,7 +21,20 @@
 .header-title {
   font-family: "Permanent Marker", cursive;
   color: #fff;
-  font-size: 48px;
+  font-size: 24px;
   margin: 0;
-  margin-left: 100px;
+  margin-left: 20px;
+}
+
+@media (min-width: 692px) {
+  .header-title {
+    font-size: 38px;
+    margin-left: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .header-title {
+    font-size: 48px;
+    margin-left: 100px;
+  }
 }

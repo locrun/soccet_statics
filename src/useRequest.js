@@ -1,31 +1,35 @@
 import { useState, useEffect } from "react";
 
-export const useRequest = (queryString) => {
+export const useRequest = (apiUrl) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    const apiKey = "909d343adb4b45ddb9f87cf3701a4bb1";
     const requestHandler = async () => {
-      const request = await fetch(queryString, {
-        headers: { "X-Auth-Token": apiKey },
-      });
-      const response = await request.json();
-      if (request.ok) {
+      try {
+        const request = await fetch(apiUrl, {
+          headers: { "x-auth-token": process.env.REACT_APP_API_KEY },
+        });
+        const response = await request.json();
         setLoading(false);
         setData(response);
-      } else {
-        throw new Error(
-          `Could not fetch ${queryString}, status: ${response.status}`
-        );
+      } catch (error) {
+        console.log(error);
+        setError(true);
       }
     };
 
     requestHandler();
-  }, [queryString]);
+  }, [apiUrl]);
+
+  const errorMessage = error ? (
+    <h2 className="error">...Превышен лимит запросов на сервер!</h2>
+  ) : null;
 
   return {
     data,
     loading,
+    errorMessage,
   };
 };

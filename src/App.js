@@ -5,7 +5,6 @@ import {
   CalendarLeague,
   TeamCalendar,
 } from "./Components";
-
 import {
   BrowserRouter,
   Route,

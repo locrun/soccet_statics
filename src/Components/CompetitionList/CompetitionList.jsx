@@ -1,59 +1,33 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+import React from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import { MaterialInputSearch } from "../../MaterialUI/MaterialInputSearch";
 import Button from "@mui/material/Button";
 import Spin from "../../Spin";
 import { useRequest } from "../../useRequest";
 import plug from "../../images/fon-futbol.jpg";
 import "./style.css";
 export const CompetitionList = () => {
-  const { data, loading } = useRequest(
+  const { data, loading, errorMessage } = useRequest(
     `https://api.football-data.org/v2/competitions/?plan=TIER_ONE`
   );
-  const [value, setValue] = useState("");
-  const queryParams = window.location.href;
-  const filterParams = decodeURIComponent(queryParams).slice(
-    30,
-    queryParams.length
-  );
 
-  useEffect(() => {
-    setValue(filterParams);
-  }, [filterParams]);
-
-  const handleChange = (e) => {
-    setValue(e.target.value);
-    window.history.pushState("Object", "Title", `?filter=${e.target.value}`);
-  };
+  const [searchParams, setSearchParams] = useSearchParams("");
+  const filterData = searchParams.get("filter") || "";
 
   const filter = data.competitions?.filter((team) => {
     const names = team.area.name + team.name;
-    return (
-      names.includes(filterParams) +
-      names.toLowerCase().includes(filterParams) +
-      +names.toUpperCase().includes(filterParams)
-    );
+    const regExp = new RegExp(filterData, "i");
+    return regExp.test(names);
   });
 
   return (
     <>
-      <Box
-        sx={{
-          maxWidth: "100%",
-          marginBottom: "50px",
-          padding: "0 3px",
-        }}
-      >
-        <TextField
-          fullWidth
-          label="Search"
-          id="fullWidth"
-          value={value}
-          onChange={handleChange}
-        />
-      </Box>
+      <MaterialInputSearch
+        value={filterData}
+        setSearchParams={setSearchParams}
+      />
       <div className="card-wrapper">
+        {errorMessage}
         {loading ? (
           <Spin />
         ) : (

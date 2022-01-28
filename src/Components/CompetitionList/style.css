@@ -3,8 +3,13 @@
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
+}
+@media (min-width: 768px) {
+  .card-wrapper {
+    justify-content: space-between;
+  }
 }
 
 .card {
@@ -15,12 +20,15 @@
   justify-content: space-between;
   margin-bottom: 50px;
 }
-
+.card-images {
+  line-height: 0;
+}
 .card-images img {
   height: 120px;
   line-height: 0;
   object-fit: contain;
 }
+
 .card-title {
   margin-top: 20px;
 }
@@ -29,7 +37,7 @@
   color: #9d1616cc;
   margin: 0;
   font-family: Arial;
-  line-height: 1.3;
+  line-height: 1;
   font-weight: 800;
 }
 .champ-name {
@@ -45,4 +53,8 @@
   margin-top: 10px;
   display: flex;
   flex-direction: column;
+}
+.error {
+  display: inline-block;
+  margin: 0 auto;
 }

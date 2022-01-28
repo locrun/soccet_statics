@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  margin: 0 15px;
 }
 .team-icon img {
   width: 70px;
