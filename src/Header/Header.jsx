@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import wolf from "../../images/dog.png";
+import wolf from "../images/dog.png";
 import "./style.css";
-export const Header = () => {
+const Header = () => {
   return (
     <header className="header">
       <div className="container">
@@ -16,3 +16,4 @@ export const Header = () => {
     </header>
   );
 };
+export default Header;

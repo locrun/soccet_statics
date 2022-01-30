@@ -2,7 +2,7 @@ import React from "react";
 import { createSearchParams } from "react-router-dom";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-export const MaterialInputSearch = ({ value, setSearchParams }) => {
+export const InputSearch = ({ value, setSearchParams }) => {
   return (
     <div>
       <Box

@@ -1,10 +1,10 @@
 import {
-  Header,
   CompetitionList,
   TeamList,
   CalendarLeague,
   TeamCalendar,
 } from "./Components";
+import Header from "./Header/Header";
 import {
   BrowserRouter,
   Route,

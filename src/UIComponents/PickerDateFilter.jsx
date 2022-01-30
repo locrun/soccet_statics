@@ -4,7 +4,7 @@ import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DatePicker from "@mui/lab/DatePicker";
 import "./style.css";
-export const MaterialDateFilter = ({
+export const PickerDateFilter = ({
   dateFrom,
   dateTo,
   handleChangeDateFrom,
@@ -47,4 +47,4 @@ export const MaterialDateFilter = ({
   );
 };
 
-export default MaterialDateFilter;
+export default PickerDateFilter;

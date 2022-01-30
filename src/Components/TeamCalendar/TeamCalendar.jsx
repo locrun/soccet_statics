@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
-import { MaterialTable } from "../../MaterialUI/MaterialTable";
-import { MaterialDateFilter } from "../../MaterialUI/MaterialDateFilter";
+import { BasicTable } from "../../UIComponents/BasicTable";
+import { PickerDateFilter } from "../../UIComponents/PickerDateFilter";
 import Dayjs from "dayjs";
 import Spin from "../../Spin";
 import { useRequest } from "../../useRequest";
@@ -44,14 +44,14 @@ export const TeamCalendar = () => {
 
   return (
     <>
-      <MaterialDateFilter
+      <PickerDateFilter
         dateFrom={selectDateFrom}
         handleChangeDateFrom={handleChangeDateFrom}
         dateTo={selectDateTo}
         handleChangeDateTo={handleChangeDateTo}
       />
       {errorMessage}
-      {loading ? <Spin /> : <MaterialTable matches={matchDate} />}
+      {loading ? <Spin /> : <BasicTable matches={matchDate} />}
     </>
   );
 };

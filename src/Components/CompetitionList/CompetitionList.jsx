@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { MaterialInputSearch } from "../../MaterialUI/MaterialInputSearch";
+import { InputSearch } from "../../UIComponents/InputSearch";
 import Button from "@mui/material/Button";
 import Spin from "../../Spin";
 import { useRequest } from "../../useRequest";
@@ -22,10 +22,7 @@ export const CompetitionList = () => {
 
   return (
     <>
-      <MaterialInputSearch
-        value={filterData}
-        setSearchParams={setSearchParams}
-      />
+      <InputSearch value={filterData} setSearchParams={setSearchParams} />
       <div className="card-wrapper">
         {errorMessage}
         {loading ? (
