@@ -1,11 +1,8 @@
 import Loader from "react-loader-spinner";
-
+import "./index.css";
 const Spin = () => {
   return (
-    <div
-      className="loader-styles"
-      style={{ position: "absolute", left: "50%", top: "50%" }}
-    >
+    <div className="loader-styles">
       <Loader
         type="TailSpin"
         color="#00BFFF"

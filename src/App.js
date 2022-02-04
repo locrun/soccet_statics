@@ -5,18 +5,12 @@ import {
   TeamCalendar,
 } from "./Components";
 import Header from "./Header/Header";
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-  Navigate,
-  Outlet,
-} from "react-router-dom";
+import { HashRouter, Route, Routes, Navigate, Outlet } from "react-router-dom";
 import "./index.css";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<CompetitionList />} />
@@ -26,7 +20,7 @@ const App = () => {
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

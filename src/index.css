@@ -22,3 +22,34 @@ code {
   width: 70px;
   height: 70px;
 }
+
+@media (min-width: 320px) {
+  .loader-styles {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+  }
+}
+@media (min-width: 470px) {
+  .loader-styles {
+    position: absolute;
+    left: 43%;
+    top: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .loader-styles {
+    position: absolute;
+    left: 45%;
+    top: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .loader-styles {
+    position: absolute;
+    left: 48%;
+    top: 50%;
+  }
+}
