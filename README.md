@@ -31,3 +31,28 @@ ReactJS:
 - https://ru.reactjs.org
 - https://github.com/rtivital/react-things
 - https://learn.javascript.ru/screencast/react
+
+
+React Native:
+- https://www.youtube.com/channel/UCOxewePwIQATdHTD3yZ2UZw/playlists
+- https://apptractor.ru/info/articles/react-native-primeryi-komponentyi-tutorialyi-i-knigi.html
+VueJs:
+- https://ru.vuejs.org/v2/guide
+- https://ru.vuejs.org/v2/api
+- https://vuex.vuejs.org/
+Angular
+- https://angular.io/docs
+- https://learn.javascript.ru/screencast/angular (RXJS)
+- https://www.youtube.com/watch?v=Rf54BH35yrY
+Требования к сдаче ТЗ:
+Проект должен быть выложен на репозиторий GitHub, код должен быть чистым
+(желательно использовать линты и prettier для автоматического контроля), в индекс не
+должны попадать временные файлы, файлы настроек проекта и библиотек.
+Ключи к API не должны быть захардкожены - это значит что они должны быть
+вынесены в переменные окружения, в самом коде ключа быть не должно.
+Плюсом к сдаче приложения будет настроенный деплой на gh-pages
+Категории оценки:
+- функционал (удобство интерфейса, полнота выполнения пунктов ТЗ)
+- верстка (корректность отображения в браузере, наличие адаптивной версии)
+- код (чистота кода, рациональность использования библиотек, уровень
+проработки архитектуры)
