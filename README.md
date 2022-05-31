@@ -1,4 +1,4 @@
-# Тестовое задание от компании SimbirSoft
+# Soccet stats
 ### [online demo](https://locrun.github.io/soccet_statics/)
 
 - Список лиг/соревнований
